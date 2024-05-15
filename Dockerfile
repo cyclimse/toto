@@ -1,3 +1,6 @@
 FROM alpine:3.19
 
-ENTRYPOINT [ "uname", "-a" ]
+RUN apk add --no-cache \
+    neofetch
+
+ENTRYPOINT [ "neofetch" ]
